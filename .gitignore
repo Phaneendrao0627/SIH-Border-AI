@@ -33,3 +33,8 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Generated runtime files
+backend/logs/
+modules/ocr/module1_ocr/output/
+modules/ocr/module1_ocr_backup/
