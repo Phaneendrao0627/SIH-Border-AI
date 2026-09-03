@@ -1,0 +1,49 @@
+{
+  "photo": [
+    {
+      "name": "document_photo",
+      "x": 150,
+      "y": 75,
+      "width": 280,
+      "height": 275
+    }
+  ],
+  "text": [
+    {
+      "name": "place_of_issue",
+      "x": 485,
+      "y": 340,
+      "width": 190,
+      "height": 40
+    },
+    {
+      "name": "given_name",
+      "x": 395,
+      "y": 165,
+      "width": 220,
+      "height": 35
+    },
+    {
+      "name": "passport_number",
+      "x": 770,
+      "y": 65,
+      "width": 200,
+      "height": 40
+    },
+    {
+      "name": "date_of_birth",
+      "x": 770,
+      "y": 220,
+      "width": 180,
+      "height": 35
+    },
+    {
+      "name": "holder_signature",
+      "x": 150,
+      "y": 330,
+      "width": 230,
+      "height": 100
+    }
+  ],
+  "stamp": []
+}
