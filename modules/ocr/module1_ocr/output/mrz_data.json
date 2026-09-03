@@ -1,0 +1,49 @@
+{
+    "document_type": "Passport",
+    "document_code": "P<",
+    "issuing_country": "IND",
+    "surname": "ATTHI",
+    "given_name": "MADHAVI K KDDDDSKSS",
+    "passport_number": "P3938806",
+    "nationality": "IND",
+    "date_of_birth": "1982-04-06",
+    "sex": "F",
+    "date_of_expiry": "2026-08-28",
+    "optional_data": "",
+    "raw_mrz": {
+        "line1": "P<INDATTHI<<MADHAVI<<<<<<<<<<K<<KDDDDSKSS<<<",
+        "line2": "P3938806<4IND8204066F2608282<<<<<<<<<<<<<<<2"
+    },
+    "validation": {
+        "document_code_valid": true,
+        "issuing_country_valid": true,
+        "passport_number_format_valid": true,
+        "nationality_valid": true,
+        "dob_format_valid": true,
+        "expiry_format_valid": true,
+        "sex_valid": true,
+        "valid_passport_number": true,
+        "valid_date_of_birth": true,
+        "valid_date_of_expiry": true,
+        "valid_overall_check_digit": true,
+        "mrz_valid": true,
+        "confidence": 100.0
+    },
+    "ocr_comparison": {
+        "passport_number": {
+            "ocr": null,
+            "mrz": "P3938806",
+            "match": false
+        },
+        "surname": {
+            "ocr": "ATTHI",
+            "mrz": "ATTHI",
+            "match": true
+        },
+        "given_name": {
+            "ocr": null,
+            "mrz": "MADHAVI K KDDDDSKSS",
+            "match": false
+        }
+    }
+}

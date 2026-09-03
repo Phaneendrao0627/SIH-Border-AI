@@ -1,0 +1,56 @@
+{
+    "passport.jpg": {
+        "document_type": "PASSPORT",
+        "full_name": "MADHAVI ATTHI",
+        "surname": "ATTHI",
+        "given_name": "MADHAVI",
+        "passport_number": "P3938806",
+        "nationality": "IND",
+        "date_of_birth": "1982-04-06",
+        "gender": "F",
+        "date_of_issue": "2016-08-29",
+        "date_of_expiry": "2026-08-28",
+        "place_of_birth": "PALLAMPETA, ANDHRA PRADESH",
+        "place_of_issue": "HYDERABAD"
+    },
+    "passport2.jpg": {
+        "document_type": "PASSPORT",
+        "full_name": "SANDESH RAMDAS SHINDE",
+        "surname": "SHINDE",
+        "given_name": "SANDESH RAMDAS",
+        "passport_number": "P2251480",
+        "nationality": "IND",
+        "date_of_birth": "1990-06-03",
+        "gender": "M",
+        "date_of_issue": "2016-08-31",
+        "date_of_expiry": "2026-08-30",
+        "place_of_issue": "PUNE"
+    },
+    "driving_license.jpg": {
+        "document_type": "DRIVING_LICENSE",
+        "full_name": "POOJARI ARJUN GOUD",
+        "surname": "GOUD",
+        "given_name": "POOJARI ARJUN",
+        "document_number": "TG10720240003878",
+        "date_of_birth": "2004-07-12",
+        "date_of_issue": "2024-03-23",
+        "date_of_expiry": "2044-07-12",
+        "issuing_authority": "Telangana"
+    },
+    "national_id.jpg": {
+        "document_type": "NATIONAL_ID",
+        "full_name": "Panuganti Varshith Goud",
+        "surname": "Goud",
+        "given_name": "Panuganti Varshith",
+        "document_number": "3345 4694 0117",
+        "date_of_birth": "2007-05-08",
+        "gender": "M"
+    },
+    "visa.jpg": {
+        "document_type": "VISA",
+        "full_name": "MICHEL LEFEBVRE",
+        "surname": "LEFEBVRE",
+        "given_name": "MICHEL",
+        "place_of_issue": "PARIS"
+    }
+}
