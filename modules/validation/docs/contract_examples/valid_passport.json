@@ -1,0 +1,18 @@
+{
+  "request_id": "REQ-DEMO-001",
+  "document_type": "passport",
+  "nationality": "IND",
+  "name": "RAHUL SHARMA",
+  "passport_number": "M8392104",
+  "date_of_birth": "1995-04-12",
+  "date_of_expiry": "2032-08-20",
+  "gender": "M",
+  "mrz_line_1": "P<INDSHARMA<<RAHUL<<<<<<<<<<<<<<<<<<<<<<<<<<",
+  "mrz_line_2": "M8392104<3IND9504121M3208209<<<<<<<<<<<<<<<4",
+  "mrz_checksum_score": 0.95,
+  "ocr_confidence": 0.98,
+  "metadata": {
+    "camera_id": "GATE-04",
+    "checkpoint": "DEL-T3-INTERNATIONAL"
+  }
+}

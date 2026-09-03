@@ -1,0 +1,12 @@
+{
+  "request_id": "REQ-DEMO-002",
+  "document_type": "passport",
+  "nationality": "IND",
+  "name": "PRIYA SHARMA",
+  "passport_number": "C9876543",
+  "date_of_birth": "2000-08-25",
+  "date_of_expiry": "2020-08-15",
+  "gender": "F",
+  "mrz_line_1": "P<INDSHARMA<<PRIYA<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+  "mrz_line_2": "C9876543<8IND0008257F2008158<<<<<<<<<<<<<<8"
+}

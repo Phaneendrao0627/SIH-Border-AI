@@ -1,0 +1,2 @@
+# Module 2: Document Validation relies entirely on Python 3.9+ standard library.
+# No external pip dependencies are required.

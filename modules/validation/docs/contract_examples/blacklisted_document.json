@@ -1,0 +1,12 @@
+{
+  "request_id": "REQ-DEMO-004",
+  "document_type": "passport",
+  "nationality": "IND",
+  "name": "ARAVIND SWAMY",
+  "passport_number": "X9988776",
+  "date_of_birth": "1991-03-10",
+  "date_of_expiry": "2030-05-10",
+  "gender": "M",
+  "mrz_line_1": "P<INDSWAMY<<ARAVIND<<<<<<<<<<<<<<<<<<<<<<<<<",
+  "mrz_line_2": "X9988776<4IND9103102M3005108<<<<<<<<<<<<<<<2"
+}
