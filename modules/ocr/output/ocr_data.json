@@ -1,0 +1,35 @@
+{
+    "document_type": "Passport",
+    "status": "OCR_COMPLETED",
+    "metadata": {
+        "processed_at": "2026-09-02T09:31:38.140398",
+        "input_file": "input\\passport.jpg",
+        "image_width": 1280,
+        "image_height": 741,
+        "ocr_engine": "Tesseract",
+        "preprocessing": [
+            "Grayscale",
+            "2x Resize",
+            "Gaussian Blur",
+            "Otsu Threshold",
+            "Adaptive Threshold",
+            "Morphological Processing"
+        ],
+        "ocr_passes": 4,
+        "confidence": 30.0
+    },
+    "raw_text": "| RST WORAGA REPUBLIC oF INDIA\npO erga / Type Wee ws / Country Code\nS . ae IND\n' ATTHI\na fear sya ara / Given Nan )\neS re MADHAVI oe\n| ee See] PALLAMPETA, ANDHRA PRADESH\n(Ln _ 1 29/08/2016 28/08/2026\nP<INDATTHI<X<MADHAVI<<<<<<<<eeeeesessdssss<<<\nP3938806<41IND8204066F 2608282<<<<<<<<<<<<<<<2\n\nET RTOS REPUBLIC OF INDTA\n. ae NP _-.. emda / Type wee ars / Country Onde\n| Suaia / Surname P3938806\nATTHI\n&} Pras rn Coys\n‘ po MADHAVI os\nes = < ees Fo | 06704/198e\nWw BPALLAMPETA, ANDHRA PRADESH\nYe _ 1 29/08/2016 28/08/2026\nP<INDATTHI<<MADHAVI<<<<<<<<eeedeieedesssssss<\nP3938806<41ND82046066F 2608282 <<<<<<<K<<<<<<<<2\n\naide\n\n_  —\n\nS72\n\nant\n\nLS\n\n‘REPUBLIC OF INDTA\n\nerdu / Type\n\nwee aks / Country\n\nc\n\nIND\n\nP3938806\n\nSasa / Surname\n\nATTHI\n\nfear sven =\n\n7.\n\nMADHAVI\n\n4\n\nme\n\nan\n\n¥ i\n\n4 |\n\n'\n\nT\n\nret\n\n4 word / |\n\nNDIA Ni\n\nF\n\n06/04/1982\n\nmeer N\n\nFy\n\nnTa/ Pi\n\nPoy\n\neee ene Ae\n\nANDHRA PRADESH\n\n—\n\nwi\n\nHYDERABAD\n\nA Madhav:\n\nOTT\n\nfe es)\n\n29/08/2016\n\n28/08/2026\n\nP<INDATTHI<<MADHAVI<<<<<<<<<<K<<KddddsKss<<<\n\nP3938806<41ND8204066F2608282<<<<<<<<<<<<<<<2\n\nen\n\nVIN VCRs REPUBLIC OF INDIA\n\nemu / Typo\n\nNIty @rs / Country Code\n\nwe TT\n\nas\n\nIND\n\nurraré 4./ Passport No\n\na\n\nwaa / Surname\n\nP3938806\n\nATTHI\n\nfur a = / Given Name(s)\n\nweet,\n\n“UD\n\nFAC AREAL\n\ni\n\n—. +>\n\n” i\n\nMADHAVI\n\nAT\n\nxregract / Nationality\n\nfert / Sox\n\nDate of Birth\n\n\\\n\nmy\n\nYRATT/INDIAN: -\n\n982\n\naa\n\nset fitetr\n\norn aA f Place of Birth\n\nDank\n\nPALLAMPETA, ‘ANDHRA PRADESH\n\ntt Meer a es le\n\n~\n\nwatts\n\nos ont Wey UT WIN wr wart / Place of Issuc_\n\nXz.\n\n- HYDERABAD\n\naang\n\n‘\\\n\nA madan!\n\nsindt weet} Ml27 / Date of Issue\n\ncanta aii fa) Date of Expiy\n\n_ 1 29/08/2016\n\n28/08/2026\n\nP<INDATTHI<<MADHAVI<<<<<<<<<<ddeddssssdsss<<\n\nP3938806<4IND8204066F2608282<<<<<<<<<<<<<<<2\n\n_\n",
+    "normalized_text": "| RST WORAGA REPUBLIC oF INDIA\npO erga / Type Wee ws / Country Code\nS . ae IND\n' ATTHI\na fear sya ara / Given Nan )\neS re MADHAVI oe\n| ee See] PALLAMPETA, ANDHRA PRADESH\n(Ln _ 1 29/08/2016 28/08/2026\nP<INDATTHI<X<MADHAVI<<<<<<<<eeeeesessdssss<<<\nP3938806<41IND8204066F 2608282<<<<<<<<<<<<<<<2\nET RTOS REPUBLIC OF INDTA\n. ae NP _-.. emda / Type wee ars / Country Onde\n| Suaia / Surname P3938806\nATTHI\n&} Pras rn Coys\n‘ po MADHAVI os\nes = < ees Fo | 06704/198e\nWw BPALLAMPETA, ANDHRA PRADESH\nYe _ 1 29/08/2016 28/08/2026\nP<INDATTHI<<MADHAVI<<<<<<<<eeedeieedesssssss<\nP3938806<41ND82046066F 2608282 <<<<<<<K<<<<<<<<2\naide\n_ —\nS72\nant\nLS\n‘REPUBLIC OF INDTA\nerdu / Type\nwee aks / Country\nc\nIND\nP3938806\nSasa / Surname\nATTHI\nfear sven =\n7.\nMADHAVI\n4\nme\nan\n¥ i\n4 |\n'\nT\nret\n4 word / |\nNDIA Ni\nF\n06/04/1982\nmeer N\nFy\nnTa/ Pi\nPoy\neee ene Ae\nANDHRA PRADESH\n—\nwi\nHYDERABAD\nA Madhav:\nOTT\nfe es)\n29/08/2016\n28/08/2026\nP<INDATTHI<<MADHAVI<<<<<<<<<<K<<KddddsKss<<<\nP3938806<41ND8204066F2608282<<<<<<<<<<<<<<<2\nen\nVIN VCRs REPUBLIC OF INDIA\nemu / Typo\nNIty @rs / Country Code\nwe TT\nas\nIND\nurraré 4./ Passport No\na\nwaa / Surname\nP3938806\nATTHI\nfur a = / Given Name(s)\nweet,\n“UD\nFAC AREAL\ni\n—. +>\n” i\nMADHAVI\nAT\nxregract / Nationality\nfert / Sox\nDate of Birth\n\\\nmy\nYRATT/INDIAN: -\n982\naa\nset fitetr\norn aA f Place of Birth\nDank\nPALLAMPETA, ‘ANDHRA PRADESH\ntt Meer a es le\n~\nwatts\nos ont Wey UT WIN wr wart / Place of Issuc_\nXz.\n- HYDERABAD\naang\n‘\\\nA madan!\nsindt weet} Ml27 / Date of Issue\ncanta aii fa) Date of Expiy\n_ 1 29/08/2016\n28/08/2026\nP<INDATTHI<<MADHAVI<<<<<<<<<<ddeddssssdsss<<\nP3938806<4IND8204066F2608282<<<<<<<<<<<<<<<2\n_",
+    "extracted_data": {
+        "passport_number": null,
+        "surname": "ATTHI",
+        "given_name": null,
+        "nationality": "fert",
+        "date_of_birth": null,
+        "gender": null,
+        "date_of_issue": null,
+        "date_of_expiry": null,
+        "place_of_birth": "Dank",
+        "place_of_issue": null
+    }
+}

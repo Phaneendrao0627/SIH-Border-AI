@@ -1,0 +1,90 @@
+{
+    "module": "MODULE_1_OCR_EXTRACTION",
+    "module_version": "1.0.0",
+    "schema_version": "2026.1",
+    "request_id": "737cae32-7420-43b6-ba98-7ac0a3cf9a04",
+    "timestamp": "2026-09-02T17:30:52.843644",
+    "input_file": "C:\\Users\\VARSHITH GOUD\\OneDrive\\Desktop\\SIH_DOCUMENT_SCREENING\\module1_ocr\\input\\passport.jpg",
+    "file_hash_sha256": "869f28eb92b624015af0ff9fc33a7bd8871dff78e88a30a6caa57247632272ca",
+    "document_type": "PASSPORT",
+    "status": "VERIFIED",
+    "manual_review_required": false,
+    "manual_review_reasons": [],
+    "identity": {
+        "full_name": "MADHAVI ATTHI",
+        "surname": "ATTHI",
+        "given_name": "MADHAVI",
+        "nationality": "IND",
+        "date_of_birth": "1982-04-06",
+        "gender": "F"
+    },
+    "document": {
+        "document_number": "P3938806",
+        "date_of_issue": "2016-08-29",
+        "date_of_expiry": "2026-08-28",
+        "place_of_birth": "PALLAMPETA, ANDHRA PRADESH",
+        "place_of_issue": "HYDERABAD"
+    },
+    "additional_information": {
+        "issuing_country": "IND",
+        "document_code": "P",
+        "raw_mrz": [
+            "P<INDATTHI<<MADHAVI<<<<<<<<<<<<<<<<<<<KK<<<<",
+            "P3938806<4IND8204066F2608282<<<<<<<<<<<<<<<2"
+        ]
+    },
+    "face_extraction": {
+        "face_detected": true,
+        "face_image_path": "output\\face.jpg",
+        "confidence": 92.79,
+        "bounding_box": [
+            228,
+            85,
+            211,
+            284
+        ]
+    },
+    "image_quality": {
+        "quality_score": 100.0,
+        "blur_status": "SHARP",
+        "laplacian_variance": 242.69,
+        "glare_percentage": 0.11,
+        "resolution": "1280x741",
+        "deskew_angle_corrected": 0.0,
+        "warnings": []
+    },
+    "verification": {
+        "mrz_available": true,
+        "mrz_valid": true,
+        "mrz_validation_score": 100.0,
+        "composite_check_valid": true,
+        "completeness_score": 100.0,
+        "consistency_score": 100.0,
+        "confidence_score": 100.0,
+        "confidence_level": "HIGH",
+        "field_comparisons": {
+            "passport_number": "MATCH",
+            "surname": "MATCH",
+            "given_name": "MATCH",
+            "nationality": "MATCH",
+            "gender": "MATCH",
+            "date_of_birth": "MATCH",
+            "date_of_expiry": "MATCH"
+        }
+    },
+    "field_confidence": {
+        "full_name": 85.0,
+        "surname": 100.0,
+        "given_name": 100.0,
+        "nationality": 100.0,
+        "date_of_birth": 100.0,
+        "gender": 100.0,
+        "document_number": 100.0,
+        "date_of_issue": 80.0,
+        "date_of_expiry": 95.0,
+        "place_of_birth": 80.0,
+        "place_of_issue": 80.0
+    },
+    "raw_ocr_text": "erdu/Type ee ws / Country Code\nxe! al IND\nATTHI\nfar va aH / Given Nan\nMADHAVI\nraett’/ Natio Se r= ED\nF *06/04/1982\nGF ear / Place of\n“ PALLAMPETA, ANDHRA PRADESH\n\"HYDERABAD\nA Madhav!\nte 29/08/2016 28/08/2026\nP<INDATTHI<<MADHAVI<<<<<<K<<KesdsKeds<s<<<<<<\nP3938806<41ND8204066F 2608282<<<<<<<<<<<<<<<2\nPISS Tea REPUBLIC OF INDIA —\neee erdu/Type ee ws / Country Code\nsym / Surname P3938806\nATTHI\n> far an aA / Given Nan\nag 2s Gf MADHAVI ee S\nae N unddta fANDIAN F = 06/04/1982\ncd 35 PALLAMPETA, ANDHRA PRADESH\na _ 29/08/2016 28/08/2026\nP<INDATTHI<<MADHAVI<<<<<<<<<<< <<< <<< << KK << <<\nP3938806<4IND8204066F 2608282<<<<<<<<<<<<<<<2\n= S ay «naam “— Niex wits / Country Code areraté 4./ Passpori No\n= oa saa / Surname ——!ND__ P3938806\npe —_ ; fear am / Given Name(s) aie\nes ry MADHAVI a\nRe ‘| » ae a sregrant/Nationailty S(t / Sex eeeeewreet WHO ais OF inTh\n9 ee NE Urea INDIAN F $06 /0%/4982\n= ¥ PALLAMPETA, ANDHRA PRADESH). 230 —%\n<a “Tinypepapan Pie\nA-Madhay' a ee ee\ni _1 29/08/2016 28/08/2026\nP<INDA",
+    "error_codes": []
+}
