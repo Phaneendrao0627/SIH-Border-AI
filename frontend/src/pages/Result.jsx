@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLocation, Link } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 import RiskScore from '../components/RiskScore'
 import { generatePdfReport } from '../utils/generatePdfReport'
 
@@ -36,6 +37,7 @@ const DEFAULT_DATA = {
 }
 
 function Result() {
+  const { isDark } = useTheme()
   const location = useLocation()
   const data = location.state?.screeningResult || DEFAULT_DATA
   const { riskScore, document: doc, modules } = data
@@ -103,12 +105,14 @@ function Result() {
   return (
     <div className="space-y-8 max-w-6xl">
       {/* Page Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-5">
+      <div className={`flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-5 ${
+        isDark ? 'border-gray-800' : 'border-gray-200'
+      }`}>
         <div>
-          <h1 className="text-3xl font-bold text-white">
+          <h1 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Screening Result
           </h1>
-          <p className="mt-1 text-sm text-gray-400">
+          <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
             Verification summary and risk analysis for passenger {doc.name}.
           </p>
         </div>
@@ -116,7 +120,11 @@ function Result() {
         <div className="flex items-center gap-3">
           <Link
             to="/screening"
-            className="rounded-lg bg-gray-800 hover:bg-gray-700 px-4 py-2 text-xs font-semibold text-white border border-gray-700 transition"
+            className={`rounded-lg px-4 py-2 text-xs font-semibold border transition ${
+              isDark
+                ? 'bg-gray-800 hover:bg-gray-700 text-white border-gray-700'
+                : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 shadow-sm'
+            }`}
           >
             ← New Screening
           </Link>
@@ -134,14 +142,16 @@ function Result() {
       </div>
 
       {/* Top Status & Risk Card */}
-      <div className="rounded-xl border border-gray-800 bg-gray-900 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className={`rounded-xl border p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-colors ${
+        isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+      }`}>
         <div>
-          <p className="text-xs text-gray-400">Overall Verification Status</p>
+          <p className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Overall Verification Status</p>
           <div className="mt-2 flex items-center gap-3">
             <span className={`text-xl font-bold px-3 py-1 rounded-md border ${statusBadge}`}>
               {status}
             </span>
-            <span className="text-sm text-gray-300">
+            <span className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
               {status === 'PASS' && 'Identity verified successfully'}
               {status === 'REVIEW' && 'Manual inspection recommended'}
               {status === 'REJECT' && 'Potential document forgery detected'}
@@ -153,38 +163,40 @@ function Result() {
       </div>
 
       {/* Extracted Document Information */}
-      <div className="rounded-xl border border-gray-800 bg-gray-900 p-6">
-        <h2 className="text-base font-semibold text-white">
+      <div className={`rounded-xl border p-6 transition-colors ${
+        isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+      }`}>
+        <h2 className={`text-base font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
           Extracted Document Information
         </h2>
-        <p className="mt-1 text-xs text-gray-400">
+        <p className={`mt-1 text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
           Data read from the identity document via OCR.
         </p>
 
         <div className="mt-5 grid grid-cols-2 md:grid-cols-3 gap-5 text-sm">
           <div>
-            <span className="text-xs text-gray-400">Full Name</span>
-            <p className="mt-1 font-medium text-white">{doc.name}</p>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Full Name</span>
+            <p className={`mt-1 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{doc.name}</p>
           </div>
           <div>
-            <span className="text-xs text-gray-400">Passport / ID Number</span>
-            <p className="mt-1 font-medium text-white">{doc.passportNumber}</p>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Passport / ID Number</span>
+            <p className={`mt-1 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{doc.passportNumber}</p>
           </div>
           <div>
-            <span className="text-xs text-gray-400">Nationality</span>
-            <p className="mt-1 font-medium text-white">{doc.nationality}</p>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Nationality</span>
+            <p className={`mt-1 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{doc.nationality}</p>
           </div>
           <div>
-            <span className="text-xs text-gray-400">Date of Birth</span>
-            <p className="mt-1 font-medium text-white">{doc.dateOfBirth}</p>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Date of Birth</span>
+            <p className={`mt-1 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{doc.dateOfBirth}</p>
           </div>
           <div>
-            <span className="text-xs text-gray-400">Date of Expiry</span>
-            <p className="mt-1 font-medium text-white">{doc.dateOfExpiry}</p>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Date of Expiry</span>
+            <p className={`mt-1 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{doc.dateOfExpiry}</p>
           </div>
           <div>
-            <span className="text-xs text-gray-400">Gender</span>
-            <p className="mt-1 font-medium text-white">{doc.gender}</p>
+            <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Gender</span>
+            <p className={`mt-1 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>{doc.gender}</p>
           </div>
         </div>
       </div>
@@ -192,78 +204,88 @@ function Result() {
       {/* Verification Modules 2x2 Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Module 1 */}
-        <div className="rounded-xl border border-gray-800 bg-gray-900 p-5">
+        <div className={`rounded-xl border p-5 transition-colors ${
+          isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+        }`}>
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
+            <span className={`text-xs font-semibold uppercase tracking-wide ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
               Module 1: OCR Extraction
             </span>
-            <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
+            <span className="text-xs font-medium text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">
               ✓ {modules?.ocr?.status || 'Passed'}
             </span>
           </div>
-          <p className="mt-3 text-sm text-gray-300">
+          <p className={`mt-3 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {modules?.ocr?.details}
           </p>
         </div>
 
         {/* Module 2 */}
-        <div className="rounded-xl border border-gray-800 bg-gray-900 p-5">
+        <div className={`rounded-xl border p-5 transition-colors ${
+          isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+        }`}>
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
+            <span className={`text-xs font-semibold uppercase tracking-wide ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
               Module 2: Document Validation
             </span>
-            <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
+            <span className="text-xs font-medium text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">
               ✓ {modules?.validation?.status || 'Passed'}
             </span>
           </div>
-          <p className="mt-3 text-sm text-gray-300">
+          <p className={`mt-3 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {modules?.validation?.details}
           </p>
         </div>
 
         {/* Module 3 */}
-        <div className="rounded-xl border border-gray-800 bg-gray-900 p-5">
+        <div className={`rounded-xl border p-5 transition-colors ${
+          isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+        }`}>
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
+            <span className={`text-xs font-semibold uppercase tracking-wide ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
               Module 3: Tampering Detection
             </span>
-            <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
+            <span className="text-xs font-medium text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">
               ✓ {modules?.tampering?.status || 'No Issues'}
             </span>
           </div>
-          <p className="mt-3 text-sm text-gray-300">
+          <p className={`mt-3 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {modules?.tampering?.details}
           </p>
         </div>
 
         {/* Module 4 */}
-        <div className="rounded-xl border border-gray-800 bg-gray-900 p-5">
+        <div className={`rounded-xl border p-5 transition-colors ${
+          isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+        }`}>
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide">
+            <span className={`text-xs font-semibold uppercase tracking-wide ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
               Module 4: Face Verification
             </span>
-            <span className="text-xs font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
+            <span className="text-xs font-medium text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded">
               ✓ {modules?.face?.status || 'Match Confirmed'}
             </span>
           </div>
-          <p className="mt-3 text-sm text-gray-300">
+          <p className={`mt-3 text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
             {modules?.face?.details}
           </p>
         </div>
       </div>
 
       {/* EXPLAINABLE RISK SCORE BREAKDOWN */}
-      <div className="rounded-xl border border-gray-800 bg-gray-900 p-6">
+      <div className={`rounded-xl border p-6 transition-colors ${
+        isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-white shadow-sm'
+      }`}>
         <div className="flex items-center justify-between">
           <div>
-            <h2 className="text-base font-semibold text-white">
+            <h2 className={`text-base font-semibold ${isDark ? 'text-white' : 'text-gray-900'}`}>
               Explainable Risk Score Breakdown
             </h2>
-            <p className="mt-1 text-xs text-gray-400">
+            <p className={`mt-1 text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
               Transparent audit showing how each factor mathematically contributed to the {riskScore}% risk score.
             </p>
           </div>
-          <span className="text-xs font-medium text-yellow-400 bg-yellow-400/10 px-2.5 py-1 rounded border border-yellow-400/20">
+          <span className="text-xs font-medium text-yellow-500 bg-yellow-400/10 px-2.5 py-1 rounded border border-yellow-400/20">
             Transparent AI
           </span>
         </div>
@@ -271,50 +293,52 @@ function Result() {
         <div className="mt-5 overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead>
-              <tr className="border-b border-gray-800 text-gray-400">
+              <tr className={`border-b ${isDark ? 'border-gray-800 text-gray-400' : 'border-gray-200 text-gray-500'}`}>
                 <th className="pb-3 font-semibold">Factor / Source</th>
                 <th className="pb-3 font-semibold">Status</th>
                 <th className="pb-3 font-semibold">Risk Penalty</th>
                 <th className="pb-3 font-semibold">Reasoning</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-800/60">
+            <tbody className={`divide-y ${isDark ? 'divide-gray-800/60' : 'divide-gray-100'}`}>
               {riskBreakdown.map((row, idx) => (
-                <tr key={idx} className="hover:bg-gray-800/30 transition">
-                  <td className="py-3 font-medium text-white">
+                <tr key={idx} className={`transition ${isDark ? 'hover:bg-gray-800/30' : 'hover:bg-gray-50'}`}>
+                  <td className={`py-3 font-medium ${isDark ? 'text-white' : 'text-gray-900'}`}>
                     {row.factor}
-                    <span className="block text-[11px] text-gray-500">{row.module}</span>
+                    <span className={`block text-[11px] ${isDark ? 'text-gray-500' : 'text-gray-400'}`}>{row.module}</span>
                   </td>
                   <td className="py-3">
                     <span className={`inline-block px-2 py-0.5 rounded text-[11px] font-semibold ${
                       row.status === 'Valid' || row.status === 'Match Confirmed' || row.status === 'Clean' || row.status === 'Clear'
-                        ? 'bg-emerald-500/10 text-emerald-400'
-                        : 'bg-red-500/10 text-red-400'
+                        ? 'bg-emerald-500/10 text-emerald-500'
+                        : 'bg-red-500/10 text-red-500'
                     }`}>
                       {row.status}
                     </span>
                   </td>
-                  <td className="py-3 font-mono font-bold text-gray-200">
+                  <td className={`py-3 font-mono font-bold ${isDark ? 'text-gray-200' : 'text-gray-800'}`}>
                     {row.points}
                   </td>
-                  <td className="py-3 text-gray-400 max-w-sm">
+                  <td className={`py-3 max-w-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                     {row.reason}
                   </td>
                 </tr>
               ))}
 
               {/* Total Summary Row */}
-              <tr className="bg-gray-950 font-semibold border-t border-gray-700 text-sm">
-                <td className="py-3 px-2 text-white">Composite Assessment</td>
+              <tr className={`font-semibold border-t text-sm ${
+                isDark ? 'bg-gray-950 border-gray-700' : 'bg-gray-50 border-gray-200'
+              }`}>
+                <td className={`py-3 px-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>Composite Assessment</td>
                 <td className="py-3">
                   <span className={`px-2 py-0.5 rounded text-xs ${statusBadge}`}>
                     {status}
                   </span>
                 </td>
-                <td className="py-3 font-mono text-yellow-400 font-bold">
+                <td className="py-3 font-mono text-yellow-500 font-bold">
                   {riskScore}% Total
                 </td>
-                <td className="py-3 text-xs text-gray-300 font-normal">
+                <td className={`py-3 text-xs font-normal ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   {status === 'PASS' && 'All critical criteria satisfied. Clearance recommended.'}
                   {status === 'REVIEW' && 'Discrepancies found. Forward to secondary inspection.'}
                   {status === 'REJECT' && 'High probability fraud. Flag passenger and detain.'}
@@ -326,12 +350,18 @@ function Result() {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-800">
+      <div className={`flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t ${
+        isDark ? 'border-gray-800' : 'border-gray-200'
+      }`}>
         <button
           type="button"
           onClick={handleDownloadPdf}
           disabled={downloading}
-          className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-lg bg-gray-800 hover:bg-gray-700 px-5 py-2 text-sm font-semibold text-gray-200 border border-gray-700 transition"
+          className={`w-full sm:w-auto flex items-center justify-center gap-2 rounded-lg px-5 py-2 text-sm font-semibold border transition ${
+            isDark
+              ? 'bg-gray-800 hover:bg-gray-700 text-gray-200 border-gray-700'
+              : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 shadow-sm'
+          }`}
         >
           <span>📄</span>
           {downloading ? 'Downloading...' : 'Export Official PDF Report'}
@@ -349,7 +379,11 @@ function Result() {
           <button
             type="button"
             onClick={() => alert('Flagged for secondary inspection counter.')}
-            className="rounded-lg bg-gray-800 hover:bg-gray-700 px-5 py-2 text-sm font-semibold text-gray-200 border border-gray-700 transition"
+            className={`rounded-lg px-5 py-2 text-sm font-semibold border transition ${
+              isDark
+                ? 'bg-gray-800 hover:bg-gray-700 text-gray-200 border-gray-700'
+                : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 shadow-sm'
+            }`}
           >
             Secondary Inspection
           </button>

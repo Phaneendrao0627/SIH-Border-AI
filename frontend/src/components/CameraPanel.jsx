@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
+import { useTheme } from '../context/ThemeContext'
 
 function CameraPanel({ onCapture }) {
+  const { isDark } = useTheme()
   const [cameraActive, setCameraActive] = useState(false)
   const [capturedPhoto, setCapturedPhoto] = useState(null)
   const videoRef = useRef(null)
@@ -59,17 +61,23 @@ function CameraPanel({ onCapture }) {
   }, [])
 
   return (
-    <div className="rounded-xl border border-gray-800 bg-gray-900 p-6 flex flex-col justify-between">
+    <div className={`rounded-xl border p-6 flex flex-col justify-between transition-colors ${
+      isDark
+        ? 'border-gray-800 bg-gray-900 text-white'
+        : 'border-gray-200 bg-white text-gray-900 shadow-sm'
+    }`}>
       <div>
-        <h2 className="text-lg font-semibold text-white">
+        <h2 className="text-lg font-semibold">
           Passenger Camera
         </h2>
-        <p className="mt-1 text-sm text-gray-400">
+        <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
           Capture the passenger's photo for face matching.
         </p>
 
         <div className="mt-5">
-          <div className="h-56 w-full overflow-hidden rounded-lg border border-gray-700 bg-black flex items-center justify-center relative">
+          <div className={`h-56 w-full overflow-hidden rounded-lg border flex items-center justify-center relative ${
+            isDark ? 'border-gray-700 bg-black' : 'border-gray-200 bg-gray-100'
+          }`}>
             {cameraActive ? (
               <video
                 ref={videoRef}
@@ -91,7 +99,11 @@ function CameraPanel({ onCapture }) {
                 <button
                   type="button"
                   onClick={startCamera}
-                  className="mt-3 rounded-md bg-gray-800 px-3 py-1.5 text-xs text-gray-200 border border-gray-700 hover:bg-gray-700 transition"
+                  className={`mt-3 rounded-md px-3 py-1.5 text-xs border transition ${
+                    isDark
+                      ? 'bg-gray-800 text-gray-200 border-gray-700 hover:bg-gray-700'
+                      : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 shadow-sm'
+                  }`}
                 >
                   Start Camera
                 </button>
@@ -113,7 +125,7 @@ function CameraPanel({ onCapture }) {
                 <button
                   type="button"
                   onClick={stopCamera}
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-gray-600"
                 >
                   Turn off
                 </button>
@@ -122,11 +134,11 @@ function CameraPanel({ onCapture }) {
 
             {capturedPhoto && (
               <div className="flex items-center justify-between w-full">
-                <span className="text-emerald-400 font-medium">✓ Photo captured</span>
+                <span className="text-emerald-500 font-medium">✓ Photo captured</span>
                 <button
                   type="button"
                   onClick={handleRetake}
-                  className="text-yellow-400 hover:underline"
+                  className="text-yellow-500 hover:underline"
                 >
                   Retake photo
                 </button>
@@ -136,7 +148,7 @@ function CameraPanel({ onCapture }) {
         </div>
       </div>
 
-      <p className="mt-4 text-xs text-gray-400">
+      <p className={`mt-4 text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
         Live camera snapshot is compared against the document photograph.
       </p>
     </div>

@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 import DocumentUpload from '../components/DocumentUpload'
 import CameraPanel from '../components/CameraPanel'
 
 function Screening() {
+  const { isDark } = useTheme()
   const [selectedFile, setSelectedFile] = useState(null)
   const [filePreview, setFilePreview] = useState(null)
   const [cameraPhoto, setCameraPhoto] = useState(null)
@@ -66,10 +68,10 @@ function Screening() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-white">
+      <h1 className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
         Document Screening
       </h1>
-      <p className="mt-2 text-sm text-gray-400">
+      <p className={`mt-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
         Upload a travel document and capture passenger photo for identity verification.
       </p>
 
@@ -80,8 +82,12 @@ function Screening() {
       </div>
 
       {/* Bottom Start Button */}
-      <div className="mt-8 flex items-center justify-between rounded-xl border border-gray-800 bg-gray-900 p-4">
-        <p className="text-xs text-gray-400">
+      <div className={`mt-8 flex items-center justify-between rounded-xl border p-4 transition-colors ${
+        isDark
+          ? 'border-gray-800 bg-gray-900 text-gray-400'
+          : 'border-gray-200 bg-white text-gray-600 shadow-sm'
+      }`}>
+        <p className="text-xs">
           Make sure document details and passenger photo are clear before starting.
         </p>
 
