@@ -18,3 +18,14 @@ uvicorn==0.52.4
 uvloop==0.22.1
 watchfiles==1.2.0
 websockets==17.1
+
+# OCR module dependencies
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+passporteye>=2.2.0
+pillow>=10.0.0
+numpy>=1.24.0
+scikit-image>=0.21.0
+scipy>=1.11.0
+Flask>=3.0.0
+flask-cors>=4.0.0
