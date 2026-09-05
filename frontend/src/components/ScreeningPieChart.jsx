@@ -23,7 +23,7 @@ function ScreeningPieChart({ data }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-4 mb-6 transition-colors border-inherit">
         <div>
           <h2 className="text-lg font-semibold">
-            Today's Screening Distribution
+            Today's Screening Overview
           </h2>
           <p className={`text-xs mt-0.5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
             Live outcome breakdown of all travelers screened today at checkpoint terminals
@@ -104,7 +104,7 @@ function ScreeningPieChart({ data }) {
           </div>
 
           <p className={`text-[11px] mt-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-            Hover over any ring segment to view details
+            Hover over each segment to explore risk factors.
           </p>
         </div>
 
