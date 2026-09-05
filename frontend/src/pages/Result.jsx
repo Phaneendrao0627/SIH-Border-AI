@@ -126,7 +126,7 @@ function Result() {
                 : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 shadow-sm'
             }`}
           >
-            ← New Screening
+            New Screening
           </Link>
 
           <button
@@ -136,7 +136,7 @@ function Result() {
             className="flex items-center gap-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 px-4 py-2 text-xs font-bold text-black transition shadow-sm disabled:opacity-50"
           >
             <span>📄</span>
-            {downloading ? 'Generating PDF...' : 'Download Official PDF'}
+            {downloading ? 'Generating PDF...' : 'Download PDF'}
           </button>
         </div>
       </div>
@@ -364,7 +364,7 @@ function Result() {
           }`}
         >
           <span>📄</span>
-          {downloading ? 'Downloading...' : 'Export Official PDF Report'}
+          {downloading ? 'Downloading...' : 'Export PDF Report'}
         </button>
 
         <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
