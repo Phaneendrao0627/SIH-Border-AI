@@ -32,7 +32,7 @@ function Dashboard() {
       </h1>
 
       <p className="mt-2 text-gray-400">
-        Monitor and manage identity screenings.
+        Track & Verify Identities.
       </p>
 
       <Link

@@ -30,7 +30,7 @@ function DocumentUpload({ onFileSelect }) {
     }`}>
       <div>
         <h2 className="text-lg font-semibold">
-          Travel Document
+          Document Verification
         </h2>
         <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
           Upload a passport, visa, or national identity card.

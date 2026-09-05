@@ -72,7 +72,7 @@ function Screening() {
         Document Screening
       </h1>
       <p className={`mt-2 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-        Upload a travel document and capture passenger photo for identity verification.
+        Upload the travel document and capture a live passenger image to begin identity screening
       </p>
 
       {/* Upload and Camera Cards */}

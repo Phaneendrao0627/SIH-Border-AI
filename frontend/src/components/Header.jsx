@@ -14,7 +14,7 @@ function Header() {
         <span className={`text-xs font-medium ${
           isDark ? 'text-gray-400' : 'text-gray-500'
         }`}>
-          Checkpoint Terminal #04 • Officer Workstation
+          Border Security Terminal • Officer Workstation
         </span>
       </div>
 

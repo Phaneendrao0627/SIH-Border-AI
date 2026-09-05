@@ -68,10 +68,10 @@ function CameraPanel({ onCapture }) {
     }`}>
       <div>
         <h2 className="text-lg font-semibold">
-          Passenger Camera
+          Live Identity Capture
         </h2>
         <p className={`mt-1 text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-          Capture the passenger's photo for face matching.
+          Capture a live passenger image for liveness and facial verification.
         </p>
 
         <div className="mt-5">
